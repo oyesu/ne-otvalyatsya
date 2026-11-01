@@ -3,13 +3,13 @@ const SHOW_TRAINING = false;
 
 // all prices live here: change the price field
 const SERVICES = [
-  {title: 'Наращивание волос', text: 'Длина и объём, которые выглядят естественно и держатся.', price: 'от 9 900 ₽', featured: true},
+  {title: 'Наращивание волос', text: 'Цена зависит от длины и состояния волос.', price: 'от 9 900 ₽', featured: true},
   {title: 'Сложное окрашивание', text: 'AirTouch, мелирование, балаяж, шатуш. Тонирование и укладка по желанию входят в стоимость.', price: 'от 4 900 ₽', featured: true},
   {title: 'Однотонное окрашивание и тонирование', text: 'Уход и укладка входят в стоимость.', price: 'от 2 800 ₽', featured: true},
-  {title: 'Кератин и холодное восстановление', text: 'Возвращаем волосам гладкость и блеск.', price: 'По запросу'},
-  {title: 'Женские стрижки', text: 'Стрижка с учётом формы лица и структуры волос.', price: 'от 1 200 ₽'},
-  {title: 'Мужские стрижки и барбершоп', text: 'Стрижка, оформление бороды.', price: 'от 1 000 ₽'},
-  {title: 'Подарочные сертификаты', text: 'Подарите волосы, которые не отвалятся.', price: 'Номинал на выбор'}
+  {title: 'Кератин и холодное восстановление', text: '', price: 'По запросу'},
+  {title: 'Женские стрижки', text: '', price: 'от 1 200 ₽'},
+  {title: 'Мужские стрижки и барбершоп', text: '', price: 'от 1 000 ₽'},
+  {title: 'Подарочные сертификаты', text: 'Подарите волосы, которые не отвалятся.', price: 'По запросу'}
 ];
 
 // optional block, controlled by the flag above
@@ -27,7 +27,7 @@ services.forEach(s => {
   card.className = s.featured ? 'card card--featured reveal' : 'card reveal';
   card.innerHTML =
     '<h3>' + s.title + '</h3>' +
-    '<p>' + s.text + '</p>' +
+    (s.text ? '<p>' + s.text + '</p>' : '') +
     '<span class="card__price">' + s.price + '</span>';
   (s.featured ? mainBox : extraBox).appendChild(card);
 

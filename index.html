@@ -15,13 +15,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<!-- todo: check opening hours below (10:00 is a guess) -->
+<!-- todo: add the opening time to openingHoursSpecification -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"HairSalon","name":"Не отвалятся",
 "telephone":"+7 910 256-07-61",
 "address":{"@type":"PostalAddress","streetAddress":"ул. Плехановская, 24А","addressLocality":"Воронеж","addressCountry":"RU"},
 "geo":{"@type":"GeoCoordinates","latitude":51.666954,"longitude":39.193743},
-"openingHours":"Mo-Su 10:00-22:00",
+"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"closes":"22:00"},
 "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","ratingCount":"70"}}
 </script>
 </head>
@@ -107,17 +107,17 @@
         <article class="master reveal">
           <div class="placeholder master__photo" role="img" aria-label="Место для фото мастера">Фото мастера</div>
           <h3 class="master__name"><mark class="todo">[имя]</mark></h3>
-          <p>Наращивание волос</p>
+          <p><mark class="todo">[специализация]</mark></p>
         </article>
         <article class="master reveal">
           <div class="placeholder master__photo" role="img" aria-label="Место для фото мастера">Фото мастера</div>
           <h3 class="master__name"><mark class="todo">[имя]</mark></h3>
-          <p>Сложное окрашивание</p>
+          <p><mark class="todo">[специализация]</mark></p>
         </article>
         <article class="master reveal">
           <div class="placeholder master__photo" role="img" aria-label="Место для фото мастера">Фото мастера</div>
           <h3 class="master__name"><mark class="todo">[имя]</mark></h3>
-          <p>Стрижки и барбершоп</p>
+          <p><mark class="todo">[специализация]</mark></p>
         </article>
       </div>
     </div>
@@ -127,10 +127,9 @@
     <div class="container">
       <h2 class="section__title">Почему выбирают нас</h2>
       <div class="grid grid--4">
-        <article class="card reveal"><h3 class="card__title">Консультация без спешки</h3><p>Сначала разговор, потом работа: выясняем, чего вы хотите на самом деле.</p></article>
-        <article class="card reveal"><h3 class="card__title">Оттенок и техника под вас</h3><p>Подбираем под цвет глаз, кожи и образ жизни, а не по картинке из интернета.</p></article>
-        <article class="card reveal"><h3 class="card__title">Исправляем чужие работы</h3><p>Неудачное окрашивание или наращивание не приговор, разберём и поправим.</p></article>
-        <article class="card reveal"><h3 class="card__title">Быстрая запись</h3><p>Отвечаем в мессенджерах и находим удобное время.</p></article>
+        <article class="card reveal"><h3 class="card__title">Консультация без спешки</h3><p>Мастера внимательно консультируют перед началом работы.</p></article>
+        <article class="card reveal"><h3 class="card__title">Исправляем чужие работы</h3><p>Берёмся за неудачные работы, сделанные в других местах.</p></article>
+        <article class="card reveal"><h3 class="card__title">Быстрая запись</h3><p>Отвечаем в мессенджерах.</p></article>
       </div>
     </div>
   </section>
@@ -139,10 +138,10 @@
     <div class="container">
       <h2 class="section__title">Как проходит визит</h2>
       <ol class="list-reset steps">
-        <li class="steps__item reveal"><h3 class="steps__title">Консультация</h3><p>Смотрим волосы, слушаем пожелания, называем цену.</p></li>
-        <li class="steps__item reveal"><h3 class="steps__title">Техника и оттенок</h3><p>Вместе выбираем, как именно будем работать.</p></li>
-        <li class="steps__item reveal"><h3 class="steps__title">Работа мастера</h3><p>Спокойно, без спешки, с чаем и Wi-Fi.</p></li>
-        <li class="steps__item reveal"><h3 class="steps__title">Результат и уход</h3><p>Показываем итог и объясняем, как ухаживать дома.</p></li>
+        <li class="steps__item reveal"><h3 class="steps__title">Консультация</h3><p>Обсуждаем, что вы хотите, и называем стоимость.</p></li>
+        <li class="steps__item reveal"><h3 class="steps__title">Техника и оттенок</h3><p>Мастер подбирает технику и оттенок под вас.</p></li>
+        <li class="steps__item reveal"><h3 class="steps__title">Работа мастера</h3><p>Мастер выполняет выбранную работу.</p></li>
+        <li class="steps__item reveal"><h3 class="steps__title">Результат и уход</h3><p>Вы получаете результат и рекомендации по уходу.</p></li>
       </ol>
     </div>
   </section>
@@ -150,12 +149,12 @@
   <section class="section section--alt" id="reviews">
     <div class="container">
       <h2 class="section__title">Что говорят клиенты</h2>
-      <p class="section__note">По отзывам на Яндекс Картах</p>
-      <!-- todo: replace with paraphrased real reviews -->
+      <p class="section__note">Рейтинг 5.0 на Яндекс Картах: 70 оценок, 59 отзывов.</p>
+      <!-- todo: paste real reviews retold in your own words -->
       <div class="grid grid--3">
-        <blockquote class="card review reveal"><p class="review__text">Пришла исправлять неудачное окрашивание из другого салона. Мастер всё объяснила и сделала красивый цвет.</p></blockquote>
-        <blockquote class="card review reveal"><p class="review__text">Хожу сюда уже три года. Результат держится, волосы выглядят живыми, а записаться получается быстро.</p></blockquote>
-        <blockquote class="card review reveal"><p class="review__text">Очень внимательно выслушали и подобрали оттенок. Уютно, спокойно, ушла довольная.</p></blockquote>
+        <blockquote class="card review reveal"><p class="review__text"><mark class="todo">[вставить пересказ реального отзыва]</mark></p></blockquote>
+        <blockquote class="card review reveal"><p class="review__text"><mark class="todo">[вставить пересказ реального отзыва]</mark></p></blockquote>
+        <blockquote class="card review reveal"><p class="review__text"><mark class="todo">[вставить пересказ реального отзыва]</mark></p></blockquote>
       </div>
       <ul class="list-reset stats" aria-label="Положительные оценки">
         <li class="stats__item"><b class="stats__value">100%</b> компетентность</li>
